@@ -149,7 +149,49 @@ SELECT title FROM books WHERE title LIKE '%\%%'
 SELECT title, stock_quantity FROM books WHERE stock_quantity LIKE '____';
 
 
-
 -- aggregate functions
 
+-- Count
+SELECT COUNT(*) FROM books;  
+SELECT COUNT(DISTINCT author_fname) FROM books;
+SELECT COUNT(DISTINCT author_lname, author_fname) FROM books;
+SELECT COUNT(*) FROM books WHERE title LIKE '%the%';
+
+-- 'Group by' summarizes or aggregates identical data into single row
+SELECT author_fname, author_lname, COUNT(*) FROM books GROUP BY author_lname;
+SELECT CONCAT('In ', released_year, ' ', COUNT(*), ' book(s) released') AS year FROM books GROUP BY released_year;
+
+-- MIN and MAX
+SELECT MIN(released_year) FROM books;
+SELECT MAX(released_year) FROM books;
+
+-- max page with title ****
+SELECT title, pages FROM books WHERE pages = (SELECT Min(pages) FROM books); 
+-- fast
+SELECT title, pages FROM books ORDER BY pages ASC LIMIT 1;
+
+SELECT author_fname, author_lname, Min(released_year) 
+FROM   books 
+GROUP  BY author_lname, 
+          author_fname;
+
+-- SUM
+SELECT author_fname,
+       author_lname,
+       Sum(pages)
+FROM books
+GROUP BY
+    author_lname,
+    author_fname;
+
+-- Average
+SELECT released_year, AVG(stock_quantity) 
+FROM books 
+GROUP BY released_year;
+
+SELECT released_year AS year,
+    COUNT(*) AS '# of books',
+    AVG(pages) AS 'avg pages'
+FROM books
+    GROUP BY released_year;
 
