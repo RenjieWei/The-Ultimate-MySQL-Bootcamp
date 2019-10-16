@@ -104,7 +104,8 @@ SELECT CONCAT
         '...'
     ) AS 'short title'
 FROM books;
-
+-- RIGHT: extracts a number of characters from a string starting from right
+SELECT RIGHT('Hello World', 4);
 -- REPLACE
 -- The REPLACE() function, as well as the other string functions, 
 -- only change the query output, they don't affect the actual data in the database.
