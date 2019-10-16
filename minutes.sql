@@ -106,8 +106,12 @@ SELECT CONCAT
 FROM books;
 
 -- REPLACE
--- The REPLACE() function, as well as the other string functions, only change the query output, they don't affect the actual data in the database.
+-- The REPLACE() function, as well as the other string functions, 
+-- only change the query output, they don't affect the actual data in the database.
 SELECT REPLACE('Hello World', 'l', '7');
+SELECT replace('    #SQL Tutorial!    ', ' ','') AS TrimmedString;
+
+-- TRIM() removes the space character OR other specified characters from the start or end of a string
 
 -- REVERSE
 SELECT REVERSE('Hello World');
