@@ -289,6 +289,7 @@ SELECT 'h' < 'p';
 SELECT 'Q' <= 'q';
 -- true
 
+-- square / square root - power(x,2) , sqrt
 
 SELECT title, author_lname, released_year FROM books WHERE released_year > 2010 && author_lname='Eggers';
 SELECT title, author_lname, released_year FROM books WHERE released_year > 2010 and author_lname='Eggers';
