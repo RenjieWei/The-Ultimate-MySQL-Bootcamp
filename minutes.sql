@@ -227,7 +227,10 @@ INSERT INTO items(price) VALUES(298.9999);
 INSERT INTO items(price) VALUES(1.9999);
  
 SELECT * FROM items;
-
+-- ROUND and FLOOR
+-- ROUND: ROUND UP
+-- FLOOR: ROUND DOWN
+                            
 -- Difference between FLOAT,DOUBLE & DECIMAL: 1.CHAR has a fixed length: both are floating-point types and calculations are approximate
 
 -- DATES & TIMES & DATETIME
