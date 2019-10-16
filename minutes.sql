@@ -149,7 +149,8 @@ SELECT title, author_fname FROM books WHERE author_fname LIKE '%da';
 SELECT title FROM books WHERE title LIKE '%\%%'
 -- 4 underscores(length = 4)
 SELECT title, stock_quantity FROM books WHERE stock_quantity LIKE '____';
-
+-- select even number
+SELECT city FROM station WHERE id % 2 = 0;
 
 -- aggregate functions
 
