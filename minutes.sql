@@ -153,6 +153,9 @@ SELECT title, author_fname FROM books WHERE author_fname LIKE '%da';
 SELECT title FROM books WHERE title LIKE '%\%%'
 -- 4 underscores(length = 4)
 SELECT title, stock_quantity FROM books WHERE stock_quantity LIKE '____';
+-- regular expression(https://www.tutorialspoint.com/mysql/mysql-regexps.htm)
+select distinct city from station
+where city regexp '^[aeiou]';
 -- select even number
 SELECT city FROM station WHERE id % 2 = 0;
 
