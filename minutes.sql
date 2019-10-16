@@ -227,9 +227,11 @@ INSERT INTO items(price) VALUES(298.9999);
 INSERT INTO items(price) VALUES(1.9999);
  
 SELECT * FROM items;
--- ROUND and FLOOR
--- ROUND: ROUND UP
+-- ROUND/FLOOR/CEIL
+-- ROUND: ROUND
+-- CEIL/CEILING: ROUND UP                                
 -- FLOOR: ROUND DOWN
+-- TRUNCATE: truncates a number to the specified number of decimal places.
                             
 -- Difference between FLOAT,DOUBLE & DECIMAL: 1.CHAR has a fixed length: both are floating-point types and calculations are approximate
 
