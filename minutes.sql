@@ -154,8 +154,10 @@ SELECT title FROM books WHERE title LIKE '%\%%'
 -- 4 underscores(length = 4)
 SELECT title, stock_quantity FROM books WHERE stock_quantity LIKE '____';
 -- regular expression(https://www.tutorialspoint.com/mysql/mysql-regexps.htm)
-select distinct city from station
-where city regexp '^[aeiou]';
+-- start '^st' ; end 'st$'; contain 'mar'; 
+-- Query to find all the names starting with a vowel and ending with 'ok' 
+SELECT FirstName FROM intque.person_tbl WHERE FirstName REGEXP '^[aeiou].*ok$';
+select distinct city from station where city not regexp '^[aeiou].';
 -- select even number
 SELECT city FROM station WHERE id % 2 = 0;
 
