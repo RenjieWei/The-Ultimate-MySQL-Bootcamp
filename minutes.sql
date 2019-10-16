@@ -97,8 +97,7 @@ FROM books;
 
 -- SUBSTRING/substr 
 SELECT SUBSTRING('Hello World', 1, 4);
-SELECT SUBSTRING('Hello World', 4);
-SELECT SUBSTRING('Hello World', -4);
+
 SELECT CONCAT
     (
         SUBSTRING(title, 1, 10),
