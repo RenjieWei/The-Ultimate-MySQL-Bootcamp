@@ -128,6 +128,7 @@ SELECT DISTINCT author_lname FROM books;
 SELECT DISTINCT author_fname, author_lname FROM books;
 
 -- Sorting data
+-- Default sorting order: ascending
 SELECT author_lname FROM books ORDER BY author_lname;
 SELECT author_lname FROM books ORDER BY author_lname DESC;
 SELECT title, author_fname, author_lname FROM books ORDER BY 2;
@@ -139,12 +140,14 @@ SELECT title, released_year FROM books ORDER BY released_year DESC LIMIT 0,5;
 SELECT title, released_year FROM books ORDER BY released_year DESC LIMIT 10,1;
 
 -- Better searching
+-- % - The percent sign represents zero, one, or multiple characters
+-- _ - The underscore represents a single character
 SELECT title, author_fname FROM books WHERE author_fname LIKE '%da%';
 SELECT title, author_fname FROM books WHERE author_fname LIKE 'da%';
 SELECT title, author_fname FROM books WHERE author_fname LIKE '%da';
-
+-- Escape sign \ ; select string with "%"
 SELECT title FROM books WHERE title LIKE '%\%%'
--- 4 underscores
+-- 4 underscores(length = 4)
 SELECT title, stock_quantity FROM books WHERE stock_quantity LIKE '____';
 
 
@@ -228,6 +231,7 @@ VALUES('Padma', '1983-11-11', '10:07:35', '1983-11-11 10:07:35');
 -- NOW() -current DATETIME
 
 -- Format of DATE
+                                 
 SELECT DATE_FORMAT(birthdt, 'Was born on a %W') FROM people;
  
 SELECT DATE_FORMAT(birthdt, '%m/%d/%Y') FROM people;
