@@ -465,8 +465,7 @@ INSERT INTO series (title, released_year, genre) VALUES
     ('Pushing Daisies', 2007, 'Comedy'),
     ('Seinfeld', 1989, 'Comedy'),
     ('Stranger Things', 2016, 'Drama');
- 
- 
+  
 INSERT INTO reviewers (first_name, last_name) VALUES
     ('Thomas', 'Stoneman'),
     ('Wyatt', 'Skaggs'),
@@ -474,8 +473,7 @@ INSERT INTO reviewers (first_name, last_name) VALUES
     ('Domingo', 'Cortes'),
     ('Colt', 'Steele'),
     ('Pinkie', 'Petit'),
-    ('Marlon', 'Crafford');
-    
+    ('Marlon', 'Crafford');   
  
 INSERT INTO reviews(series_id, reviewer_id, rating) VALUES
     (1,1,8.0),(1,2,7.5),(1,3,8.5),(1,4,7.7),(1,5,8.9),
